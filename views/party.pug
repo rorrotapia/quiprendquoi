@@ -28,5 +28,8 @@ else
 
 
 label(for="url") Partagez l'événement
-input(id="url" value=`${url}`)
+input(type="text" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}`
+    data-share-title=`${party.name}`
+    data-share-text=`${party.author} vous invite à rejoindre l'évenement ${party.name}`
+)
 
