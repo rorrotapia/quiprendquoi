@@ -1,10 +1,10 @@
 include ../partials/header.pug
-h2= party.name
-h3 Créé par "#{party.author}"
+h1= party.name
+h2 Créé par "#{party.author}"
 
 h3 Ajouter un item
-form(method="post" action="/additem")
-    div
+form(method="post" action="/additem").newParty
+    div.newParty__fields
         label(for="name") Nom de l'item
         input(name="name" id="name" required minlength="3" placeholder="Boisson")
         label(for="user") Votre pseudo
