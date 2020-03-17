@@ -1,3 +1,32 @@
 include ../partials/header.pug
 h2= party.name
-h3 Créé par #{party.author}"
+h3 Créé par "#{party.author}"
+
+h3 Ajouter un item
+form(method="post" action="/additem")
+    div
+        label(for="name") Nom de l'item
+        input(name="name" id="name" required minlength="3" placeholder="Boisson")
+        label(for="user") Votre pseudo
+        input(name="user" id="user" required minlength="3" placeholder="John")
+        label(for="party")
+        input(name="party" id="party" type="hidden" value=`${party._id}`)
+    button(type="submit") Créer
+
+if (items.length > 0)
+    form(method="post" action="/deleteitem")
+        each item in items
+            div
+                label(for="item") "#{item.name}" - "#{item.user}"
+                input(name="item" id="item" type="radio" value=`${item._id}`)
+        label(for="id_party")
+        input(name="id_party" id="id_party" type="hidden" value=`${party._id}`)
+
+        button(type="submit") supprimer
+else
+    div= "Pas de items :'("
+
+
+label(for="url") Partagez l'événement
+input(id="url" value=`${url}`)
+
