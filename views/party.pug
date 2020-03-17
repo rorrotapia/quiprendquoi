@@ -18,7 +18,7 @@ if (items.length > 0)
         each item in items
             div
                 label(for="item") "#{item.name}" - "#{item.user}"
-                input(name="item" id="item" type="radio" value=`${item._id}`)
+                input(name="item" id="item" type="radio" required value=`${item._id}`)
         label(for="id_party")
         input(name="id_party" id="id_party" type="hidden" value=`${party._id}`)
 

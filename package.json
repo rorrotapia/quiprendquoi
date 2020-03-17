@@ -23,7 +23,7 @@
   "scripts": {
     "start": "concurrently \"nodemon app.js\" \"npm:sass\" \"npm:watchify\"",
     "sass": "node-sass styles/style.scss public/style.css -w --output-style compressed",
-    "watchify": "watchify scripts/clipboard.js -o public/script.js -t [ babelify --presets [ @babel/preset-env babel-preset-minify ] ]"
+    "watchify": "watchify scripts/share.js -o public/script.js -t [ babelify --presets [ @babel/preset-env babel-preset-minify ] ]"
   },
   "repository": {
     "type": "git",
