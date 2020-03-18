@@ -6,8 +6,8 @@ L'application à réaliser est un "qui prend quoi" : un utilisateur créé un é
 
 ## TICKETS
 
-### Jour 1 - [This is for everyone](doc/01_this_is_for_everyone.md) 100%
-### Jour 2 - [Move fast, don't break things](doc/02_move_fast_dont_break_things.md) 0%
+### Jour 1 - This is for everyone 100%
+### Jour 2 - Move fast, don't break things 90%
 ### Jour 3 - All the right vitamins
 
 
