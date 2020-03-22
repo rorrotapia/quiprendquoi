@@ -1,6 +1,6 @@
 include partials/header.pug
 main
-    div.containerForm.m-right
+    div.containerForm
         h1= party.name
         h2 Créé par "#{party.author}"
 
@@ -15,7 +15,7 @@ main
                 input(name="party" id="party" type="hidden" value=`${party._id}`)
             button.btn(type="submit") Créer
 
-    div.containerForm.m-left
+    div.containerForm
         h1= party.name
         h3 Listes des items
         if (items.length > 0)
