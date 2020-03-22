@@ -22,8 +22,8 @@
   },
   "scripts": {
     "start": "concurrently --kill-others -n \"sass,server,watchify,sw\" -c \"magenta,cyan,red,green\" \"nodemon app.js\" \"npm:sass\" \"npm:watchify\" \"npm:sw\"",
-    "sass": "node-sass styles/style.scss public/style.css -w --output-style compressed",
-    "watchify": "watchify scripts/app.js -o public/script.js -t [ babelify --presets [ @babel/preset-env babel-preset-minify ] ]",
+    "sass": "node-sass assets/scss/style.scss public/style.css -w --output-style compressed",
+    "watchify": "watchify assets/js/app.js -o public/script.js -t [ babelify --presets [ @babel/preset-env babel-preset-minify ] ]",
     "sw": "watchify sw.js -o public/sw.js -t [ babelify --presets [ babel-preset-minify ] ]"
   },
   "repository": {

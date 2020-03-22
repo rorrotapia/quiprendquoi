@@ -1,37 +1,41 @@
-include ../partials/header.pug
-h1= party.name
-h2 Créé par "#{party.author}"
+include partials/header.pug
+main
+    div.containerForm.m-right
+        h1= party.name
+        h2 Créé par "#{party.author}"
 
-h3 Ajouter un item
-form(method="post" action="/additem").newParty
-    div.newParty__fields
-        label(for="name") Nom de l'item
-        input(name="name" id="name" required minlength="3" placeholder="Boisson")
-        label(for="user") Votre pseudo
-        input(name="user" id="user" required minlength="3" placeholder="John")
-        label(for="party")
-        input(name="party" id="party" type="hidden" value=`${party._id}`)
-    button(type="submit") Créer
+        h3 Ajouter un item
+        form(method="post" action="/additem").newParty
+            div.newParty__fields
+                label(for="name") Nom de l'item
+                input(name="name" id="name" required minlength="3")
+                label(for="user") Votre pseudo
+                input(name="user" id="user" required minlength="3" )
+                label(for="party")
+                input(name="party" id="party" type="hidden" value=`${party._id}`)
+            button(type="submit") Créer
 
-if (items.length > 0)
-    form(method="post" action="/deleteitem")
-        each item in items
-            div
-                label(for="item") "#{item.name}" - "#{item.user}"
-                input(name="item" id="item" type="radio" required value=`${item._id}`)
-        label(for="id_party")
-        input(name="id_party" id="id_party" type="hidden" value=`${party._id}`)
+        label(for="url") Partagez l'événement
+        input(type="text" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}`
+            data-share-title=`${party.name}`
+            data-share-text=`${party.author} vous invite à rejoindre l'évenement ${party.name}`
+        )
 
-        button(type="submit") supprimer
-else
-    div= "Pas de items :'("
+    div.containerForm.m-left
+        h1= party.name
+        h3 Listes des items
+        if (items.length > 0)
+            form(method="post" action="/deleteitem")
+                each item in items
+                    div
+                        label(for="item") "#{item.name}" - "#{item.user}"
+                        input(name="item" id="item" type="radio" required value=`${item._id}`)
+                label(for="id_party")
+                input(name="id_party" id="id_party" type="hidden" value=`${party._id}`)
 
-
-label(for="url") Partagez l'événement
-input(type="text" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}`
-    data-share-title=`${party.name}`
-    data-share-text=`${party.author} vous invite à rejoindre l'évenement ${party.name}`
-)
+                button(type="submit") supprimer
+        else
+            div= "Pas de items :'("
 
 script.
     party = !{JSON.stringify(party)}

@@ -1,0 +1,35 @@
+.newParty__fields {
+  margin-bottom: 1em;
+
+  @include medium {
+    display: grid;
+    grid-gap: 5px;
+  }
+  input {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    background: rgba(255,255,255,.2);
+  }
+
+  label {
+    display: block;
+    color: rgba(255,255,255,.7);
+
+  }
+}
+
+.newParty .btn {
+  float: left;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: -8px;
+}

@@ -1,14 +1,19 @@
-# TP - Réalisation d'une application "high-low tech"
+# Qui prend quoi
 
-L'application à réaliser est un "qui prend quoi" : un utilisateur créé un événément, le partage, et tout le monde peut ajouter les éléments qu'il compte amener pour cet événement (liste partagée). Chaque étudiant est libre d'adapter le cahier des charges de cette application de base.
+## Installation
 
-[Repository & documentation de l'API](https://github.com/bcalou/quiprendquoi-api)
+`npm install`
 
-## TICKETS
+`npm run start`
 
-### Jour 1 - This is for everyone 100%
-### Jour 2 - Move fast, don't break things 90%
-### Jour 3 - All the right vitamins 0%
+## Améliorations apportées
+
+- Affichage de la liste des items sur la page événément (`app.js`, `party.pug`)
+- Possibilité de supprimer un item (`app.js`, `party.pug`)
+- Rafraîchissement automatique des items avec les WebSockets (`socket.js`, `scripts/sockets.js`)
+- Utilisation de l'api de Notification pour signaler a l'utilisateur l'ajout ou la suppression d'items (`scripts/sockets.js`)
 
 
-### Rodrigo :D
+## Article personnel
+
+### Sujet :
