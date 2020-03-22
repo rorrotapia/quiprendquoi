@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const axios = require('axios');
 app.use(express.static('public'));
+app.use(express.static('pwa'));
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

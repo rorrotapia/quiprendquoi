@@ -8,7 +8,7 @@ L'application à réaliser est un "qui prend quoi" : un utilisateur créé un é
 
 ### Jour 1 - This is for everyone 100%
 ### Jour 2 - Move fast, don't break things 90%
-### Jour 3 - All the right vitamins
+### Jour 3 - All the right vitamins 0%
 
 
 ### Rodrigo :D
